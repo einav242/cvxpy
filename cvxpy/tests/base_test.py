@@ -25,6 +25,7 @@ class BaseTest(unittest.TestCase):
     def assertItemsAlmostEqual(self, a, b, places: int = 5) -> None:
         if np.isscalar(a):
             a = [a]
+
         else:
             a = self.mat_to_list(a)
         if np.isscalar(b):
